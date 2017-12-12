@@ -59,6 +59,6 @@ node {
    sh "sleep 3s"
    sh "kubectl run --image=snyamars007/customer360-service:latest customer360-service1  --port=8070"
    sh "kubectl expose deployment customer360-service1 --type=NodePort "
-    
+    //test 1
 
 }
