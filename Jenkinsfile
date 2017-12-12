@@ -53,8 +53,9 @@ node {
     stage 'notifyKubernetes'
      try{
       sh "kubectl delete deployment customer360-service1"
+      sh "kubectl delete svc customer360-service1"   
    }catch(e){
-      println("no prior deployment exists")
+      println("no prior deployment/service exists")
    }
    sh "sleep 3s"
    sh "kubectl run --image=snyamars007/customer360-service:latest customer360-service1  --port=8070"
