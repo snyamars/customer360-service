@@ -25,7 +25,11 @@ spring:
     cloud:
         consul:
             discovery:
-               prefer-ip-address: true
+               healthCheckPath: /v2/management/health
+               healthCheckInterval: 15s
+               hostname: ec2-35-153-120-120.compute-1.amazonaws.com
+               port: 80
+               prefer-ip-address: false
             #host: localhost
             host: ec2-54-85-196-173.compute-1.amazonaws.com
             port: 8500
