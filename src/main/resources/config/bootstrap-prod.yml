@@ -6,7 +6,7 @@ spring:
     cloud:
         consul:
             config:
-                fail-fast: true
+                fail-fast: false
                 format: yaml # set this to "files" if using git2consul
                 profile-separator: "-"
             retry:
