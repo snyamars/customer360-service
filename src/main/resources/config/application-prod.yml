@@ -25,7 +25,7 @@ spring:
     cloud:
         consul:
             discovery:
-               healthCheckPath: /management/health
+               healthCheckPath: /v1/management/health
                healthCheckInterval: 15s
                hostname: ec2-35-153-120-120.compute-1.amazonaws.com
                port: 80
