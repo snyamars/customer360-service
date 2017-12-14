@@ -24,7 +24,7 @@
 #                        timeoutInMilliseconds: 10000
 
 management:
-    context-path: /management
+    context-path: /v1/management
     health:
         mail:
             enabled: false # When using the MailService, configure an SMTP server and set this to true
@@ -34,7 +34,7 @@ spring:
     cloud:
         consul:
             discovery:
-                healthCheckPath: /management/health
+                healthCheckPath: /v1/management/health
                 instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
     jackson:
         serialization.write_dates_as_timestamps: false
