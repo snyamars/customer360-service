@@ -25,7 +25,7 @@ import com.jayway.jsonpath.JsonPath;
  * REST controller for managing Customer360.
  */
 @RestController
-@RequestMapping("/api/customer360")
+@RequestMapping("/v1/api/customer360")
 public class Customer360Resource {
 
     private final Logger log = LoggerFactory.getLogger(Customer360Resource.class);
